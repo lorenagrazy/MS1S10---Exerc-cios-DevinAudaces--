@@ -1,0 +1,24 @@
+<form class="container-fluid mt-5" [formGroup]="userCredentials">
+  <div class="row justify-content-center">
+    <div class="col-sm-4">
+      <label class="form-label d-block" for="email">
+        Email:
+      </label>
+      <input class="form-control" type="email" id="email" formControlName="email">
+      <output>
+        <p>Campo inválido</p>
+      </output>
+      <label class="form-label d-block" for="password">
+        Senha:
+      </label>
+      <input class="form-control" type="password" id="password" formControlName="password">
+      <output>
+        <p>Campo inválido</p>
+      </output>
+      <button style="background-color: black; border-color: black;" class="btn btn-primary d-block" type="button"
+        [disabled]="!userCredentials.valid" (click)="attemptLogin()">
+        Enviar
+      </button>
+    </div>
+  </div>
+</form>

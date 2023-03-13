@@ -1,0 +1,68 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.nav-link {
+  color: white;
+}
+
+.form-control.ng-invalid:not(.ng-pristine) {
+  @extend .is-invalid;
+}
+
+.header {
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container-table {
+  height: 30rem;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+@media (max-width: 564px) {
+  .container-table {
+    width: 25rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .container-table {
+    width: 20rem;
+  }
+}
+
+.input-group-sm {
+  @extend .input-group;
+  width: 19rem;
+}
+
+input+output {
+  opacity: 0;
+}
+
+.form-control.ng-invalid:not(.ng-pristine)+output {
+  @extend .invalid-feedback;
+  opacity: 1;
+}
+
+body {
+  min-height: 100vh;
+}
